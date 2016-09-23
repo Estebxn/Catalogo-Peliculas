@@ -40,7 +40,7 @@
             this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtIdUsuarios = new System.Windows.Forms.TextBox();
+            this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -155,13 +155,13 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Y conoce nuestras ofertas";
             // 
-            // txtIdUsuarios
+            // txtIdUsuario
             // 
-            this.txtIdUsuarios.Location = new System.Drawing.Point(132, 207);
-            this.txtIdUsuarios.Name = "txtIdUsuarios";
-            this.txtIdUsuarios.Size = new System.Drawing.Size(100, 20);
-            this.txtIdUsuarios.TabIndex = 11;
-            this.txtIdUsuarios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txtIdUsuario.Location = new System.Drawing.Point(132, 207);
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtIdUsuario.TabIndex = 11;
+            this.txtIdUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // txtNombres
             // 
@@ -239,6 +239,7 @@
             this.btnRegistrar.TabIndex = 20;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // lblLimpiar
             // 
@@ -248,6 +249,7 @@
             this.lblLimpiar.TabIndex = 21;
             this.lblLimpiar.Text = "Limpiar Formulario";
             this.lblLimpiar.UseVisualStyleBackColor = true;
+            this.lblLimpiar.Click += new System.EventHandler(this.lblLimpiar_Click);
             // 
             // btnVolver
             // 
@@ -276,7 +278,7 @@
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtNombres);
-            this.Controls.Add(this.txtIdUsuarios);
+            this.Controls.Add(this.txtIdUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTipoUsuario);
@@ -309,7 +311,7 @@
         private System.Windows.Forms.Label lblTipoUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtIdUsuarios;
+        private System.Windows.Forms.TextBox txtIdUsuario;
         private System.Windows.Forms.TextBox txtNombres;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtTelefono;

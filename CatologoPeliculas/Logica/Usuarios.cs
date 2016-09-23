@@ -60,19 +60,6 @@ namespace Logica
             }
         }
 
-        public long Telefono1
-        {
-            get
-            {
-                return Telefono;
-            }
-
-            set
-            {
-                Telefono = value;
-            }
-        }
-
         public string Correo1
         {
             get
@@ -83,6 +70,32 @@ namespace Logica
             set
             {
                 Correo = value;
+            }
+        }
+
+        public string Direccion1
+        {
+            get
+            {
+                return Direccion;
+            }
+
+            set
+            {
+                Direccion = value;
+            }
+        }
+
+        public long Telefono1
+        {
+            get
+            {
+                return Telefono;
+            }
+
+            set
+            {
+                Telefono = value;
             }
         }
 
@@ -125,25 +138,12 @@ namespace Logica
             }
         }
 
-        public string Direccion1
+        public void AgregarUsuario(long IdUsuario, string Nombres, string Apellidos, string Telefono, string Direccion, string Correo, string Usuario, string Contraseña, string TipoUsuario)
         {
-            get
-            {
-                return Direccion;
-            }
-
-            set
-            {
-                Direccion = value;
-            }
+            Adaptador.spr_AgregarUsuarios(IdUsuario, Nombres, Apellidos, Telefono, Correo, Direccion, Usuario, Contraseña, TipoUsuario);
         }
 
-        public void AgregarUsuario(long idUsuario, string Nombres, string Apellidos, string Correo, string Direccion, long Telefono, string Usuario, string Contraseña, string TipoUsuario)
-        {
-            Adaptador.spr_AgregarUsuarios(idUsuario, Nombres, Apellidos, Telefono, Correo, Direccion, Usuario, Contraseña, TipoUsuario);
-        }
-
-        public void ActualizarDatos(long IdUsuario, string Nombres, string Apellidos, long Telefono, string Direccion, string Correo, string Usuario, string Contraseña)
+        public void ActualizarDatos(long IdUsuario, string Nombres, string Apellidos, string Telefono, string Direccion, string Correo, string Usuario, string Contraseña)
         {
             Adaptador.spr_ActualizarDatos(Nombres, Apellidos, Correo, Telefono, Direccion, Usuario, Contraseña, IdUsuario);
         }
