@@ -51,7 +51,7 @@
             this.cbxTipoUsuario = new System.Windows.Forms.ComboBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.lblLimpiar = new System.Windows.Forms.Button();
-            this.btnVolver = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblIdUsuario
@@ -251,14 +251,15 @@
             this.lblLimpiar.UseVisualStyleBackColor = true;
             this.lblLimpiar.Click += new System.EventHandler(this.lblLimpiar_Click);
             // 
-            // btnVolver
+            // btnSiguiente
             // 
-            this.btnVolver.Location = new System.Drawing.Point(416, 522);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 23);
-            this.btnVolver.TabIndex = 22;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Location = new System.Drawing.Point(416, 522);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
+            this.btnSiguiente.TabIndex = 22;
+            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // Registro
             // 
@@ -267,7 +268,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(683, 603);
-            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.lblLimpiar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.cbxTipoUsuario);
@@ -290,9 +291,11 @@
             this.Controls.Add(this.lblApellidos);
             this.Controls.Add(this.lblNombres);
             this.Controls.Add(this.lblIdUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.Registro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,6 +325,6 @@
         private System.Windows.Forms.ComboBox cbxTipoUsuario;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button lblLimpiar;
-        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btnSiguiente;
     }
 }

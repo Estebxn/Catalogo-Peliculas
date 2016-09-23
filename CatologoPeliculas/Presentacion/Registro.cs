@@ -82,5 +82,17 @@ namespace Presentacion
             txtUser.Clear();
             txtPassword.Clear();
         }
+
+        private void Registro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Login oLogin = new Login();
+            oLogin.Show();
+            this.Hide();
+        }
     }
 }
