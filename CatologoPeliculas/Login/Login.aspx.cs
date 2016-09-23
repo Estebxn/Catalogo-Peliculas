@@ -1,5 +1,5 @@
 ﻿using Datos;
-using Datos.DSAlquilerTableAdapters;
+using Presentacion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,15 +19,20 @@ namespace Login
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (CADUsuarios.ValidarUsuario(txtUser.Text, txtPassword.Text))
+            if(oAdap.spr_Autenticacion(txtUser.Text, txtPassword.Text).ToString() == "Administrador")
             {
-
-                MessageBox.Show("usuario o clave no validos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                txtUser.Text = "";
-                txtPassword.Text = "";
-                txtUser.Focus();
-                return;
+                PeliculasPrestadas PelisPres = new PeliculasPrestadas();
+                PelisPres.Show();
+                MessageBox.Show("Bienvenido Administrador", "Accedio Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if(oAdap.spr_Autenticacion(txtUser.Text, txtPassword.Text).ToString() == "Cliente")
+                {
+                    PeliculasDisponibles PelisDispo = new PeliculasDisponibles();
+                    PelisDispo.Show();
+                    MessageBox.Show("Bienvenido Señor Usuario", "Accedio Correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }

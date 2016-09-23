@@ -40,15 +40,18 @@
             this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtIdUsuarios = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.cbxTipoUsuario = new System.Windows.Forms.ComboBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.lblLimpiar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblIdUsuario
@@ -152,72 +155,108 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Y conoce nuestras ofertas";
             // 
-            // textBox1
+            // txtIdUsuarios
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 207);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 11;
+            this.txtIdUsuarios.Location = new System.Drawing.Point(132, 207);
+            this.txtIdUsuarios.Name = "txtIdUsuarios";
+            this.txtIdUsuarios.Size = new System.Drawing.Size(100, 20);
+            this.txtIdUsuarios.TabIndex = 11;
+            this.txtIdUsuarios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // textBox2
+            // txtNombres
             // 
-            this.textBox2.Location = new System.Drawing.Point(132, 254);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 12;
+            this.txtNombres.Location = new System.Drawing.Point(132, 254);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(100, 20);
+            this.txtNombres.TabIndex = 12;
+            this.txtNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombres_KeyPress);
             // 
-            // textBox3
+            // txtApellidos
             // 
-            this.textBox3.Location = new System.Drawing.Point(132, 317);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 13;
+            this.txtApellidos.Location = new System.Drawing.Point(132, 317);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(100, 20);
+            this.txtApellidos.TabIndex = 13;
+            this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidos_KeyPress);
             // 
-            // textBox4
+            // txtTelefono
             // 
-            this.textBox4.Location = new System.Drawing.Point(132, 377);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 14;
+            this.txtTelefono.Location = new System.Drawing.Point(132, 377);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefono.TabIndex = 14;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
-            // textBox5
+            // txtDireccion
             // 
-            this.textBox5.Location = new System.Drawing.Point(132, 435);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 15;
+            this.txtDireccion.Location = new System.Drawing.Point(132, 435);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(100, 20);
+            this.txtDireccion.TabIndex = 15;
+            this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
             // 
-            // textBox6
+            // txtCorreo
             // 
-            this.textBox6.Location = new System.Drawing.Point(496, 200);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 16;
+            this.txtCorreo.Location = new System.Drawing.Point(496, 200);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(100, 20);
+            this.txtCorreo.TabIndex = 16;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
-            // textBox7
+            // txtUser
             // 
-            this.textBox7.Location = new System.Drawing.Point(496, 247);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 17;
+            this.txtUser.Location = new System.Drawing.Point(496, 247);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(100, 20);
+            this.txtUser.TabIndex = 17;
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
-            // textBox8
+            // txtPassword
             // 
-            this.textBox8.Location = new System.Drawing.Point(496, 310);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 18;
+            this.txtPassword.Location = new System.Drawing.Point(496, 310);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.TabIndex = 18;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
-            // comboBox1
+            // cbxTipoUsuario
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxTipoUsuario.FormattingEnabled = true;
+            this.cbxTipoUsuario.Items.AddRange(new object[] {
             "Administrador",
             "Cliente"});
-            this.comboBox1.Location = new System.Drawing.Point(496, 368);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 19;
+            this.cbxTipoUsuario.Location = new System.Drawing.Point(496, 368);
+            this.cbxTipoUsuario.Name = "cbxTipoUsuario";
+            this.cbxTipoUsuario.Size = new System.Drawing.Size(121, 21);
+            this.cbxTipoUsuario.TabIndex = 19;
+            this.cbxTipoUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxTipoUsuario_KeyPress);
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Location = new System.Drawing.Point(74, 522);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.TabIndex = 20;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            // 
+            // lblLimpiar
+            // 
+            this.lblLimpiar.Location = new System.Drawing.Point(231, 522);
+            this.lblLimpiar.Name = "lblLimpiar";
+            this.lblLimpiar.Size = new System.Drawing.Size(123, 23);
+            this.lblLimpiar.TabIndex = 21;
+            this.lblLimpiar.Text = "Limpiar Formulario";
+            this.lblLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(416, 522);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 22;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
             // 
             // Registro
             // 
@@ -226,15 +265,18 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(683, 603);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.lblLimpiar);
+            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.cbxTipoUsuario);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.txtApellidos);
+            this.Controls.Add(this.txtNombres);
+            this.Controls.Add(this.txtIdUsuarios);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTipoUsuario);
@@ -247,6 +289,7 @@
             this.Controls.Add(this.lblNombres);
             this.Controls.Add(this.lblIdUsuario);
             this.Name = "Registro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,14 +309,17 @@
         private System.Windows.Forms.Label lblTipoUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtIdUsuarios;
+        private System.Windows.Forms.TextBox txtNombres;
+        private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.ComboBox cbxTipoUsuario;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button lblLimpiar;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

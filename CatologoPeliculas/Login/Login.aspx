@@ -4,13 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Formulario Login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 120px;
+            width: 81px;
         }
         .auto-style2 {
-            width: 219px;
+            width: 225px;
         }
     </style>
 </head>
@@ -37,7 +38,7 @@
             <tr>
                 <td class="auto-style1">&nbsp;</td>
                 <td class="auto-style2">
-                    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" />
+                    <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" />
                 </td>
                 <td>&nbsp;</td>
             </tr>

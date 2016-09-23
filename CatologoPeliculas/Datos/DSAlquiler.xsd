@@ -204,7 +204,7 @@ SELECT IdUsuario, Nombres, Apellidos, Telefono, Direccion, Correo, Usuario, Cont
               <Mapping SourceColumn="TipoUsuario" DataSetColumn="TipoUsuario" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="CatalogoConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="spr_AgregarUsuarios" Modifier="Public" Name="spr_AgregarUsuarios" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="spr_AgregarUsuarios">
+              <DbSource ConnectionRef="CatalogoConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="spr_AgregarUsuarios" Modifier="Public" Name="spr_AgregarUsuarios" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="spr_AgregarUsuarios">
                 <InsertCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.spr_AgregarUsuarios</CommandText>
@@ -223,7 +223,7 @@ SELECT IdUsuario, Nombres, Apellidos, Telefono, Direccion, Correo, Usuario, Cont
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="CatalogoConnectionString (Settings)" DbObjectName="Catalogo.dbo.spr_Autenticacion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spr_Autenticacion" Modifier="Public" Name="spr_Autenticacion" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="spr_Autenticacion">
+              <DbSource ConnectionRef="CatalogoConnectionString (Settings)" DbObjectName="Catalogo.dbo.spr_Autenticacion" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="spr_Autenticacion" Modifier="Public" Name="spr_Autenticacion" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="spr_Autenticacion">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.spr_Autenticacion</CommandText>
@@ -245,7 +245,7 @@ SELECT IdUsuario, Nombres, Apellidos, Telefono, Direccion, Correo, Usuario, Cont
   <xs:element name="DSAlquiler" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSAlquiler" msprop:Generator_UserDSName="DSAlquiler">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Peliculas" msprop:Generator_TableClassName="PeliculasDataTable" msprop:Generator_TableVarName="tablePeliculas" msprop:Generator_TablePropName="Peliculas" msprop:Generator_RowDeletingName="PeliculasRowDeleting" msprop:Generator_RowChangingName="PeliculasRowChanging" msprop:Generator_RowEvHandlerName="PeliculasRowChangeEventHandler" msprop:Generator_RowDeletedName="PeliculasRowDeleted" msprop:Generator_UserTableName="Peliculas" msprop:Generator_RowChangedName="PeliculasRowChanged" msprop:Generator_RowEvArgName="PeliculasRowChangeEvent" msprop:Generator_RowClassName="PeliculasRow">
+        <xs:element name="Peliculas" msprop:Generator_TableClassName="PeliculasDataTable" msprop:Generator_TableVarName="tablePeliculas" msprop:Generator_RowChangedName="PeliculasRowChanged" msprop:Generator_TablePropName="Peliculas" msprop:Generator_RowDeletingName="PeliculasRowDeleting" msprop:Generator_RowChangingName="PeliculasRowChanging" msprop:Generator_RowEvHandlerName="PeliculasRowChangeEventHandler" msprop:Generator_RowDeletedName="PeliculasRowDeleted" msprop:Generator_RowClassName="PeliculasRow" msprop:Generator_UserTableName="Peliculas" msprop:Generator_RowEvArgName="PeliculasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="SKU" msprop:Generator_ColumnVarNameInTable="columnSKU" msprop:Generator_ColumnPropNameInRow="SKU" msprop:Generator_ColumnPropNameInTable="SKUColumn" msprop:Generator_UserColumnName="SKU" type="xs:long" />
@@ -290,7 +290,7 @@ SELECT IdUsuario, Nombres, Apellidos, Telefono, Direccion, Correo, Usuario, Cont
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent" msprop:Generator_RowClassName="UsuariosRow">
+        <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_RowClassName="UsuariosRow" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdUsuario" msprop:Generator_ColumnVarNameInTable="columnIdUsuario" msprop:Generator_ColumnPropNameInRow="IdUsuario" msprop:Generator_ColumnPropNameInTable="IdUsuarioColumn" msprop:Generator_UserColumnName="IdUsuario" type="xs:long" />
