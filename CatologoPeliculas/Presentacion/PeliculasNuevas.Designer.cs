@@ -107,7 +107,9 @@
             this.Controls.Add(this.pbxDamaVagabundo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PeliculasNuevas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Peliculas Nuevas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pbxDamaVagabundo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDamaVagabundo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCandilejas)).EndInit();
